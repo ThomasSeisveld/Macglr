@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villas4U</title>
-    <link rel="stylesheet" href="CSS/">
-    <link rel="stylesheet" href="CSS/">
-    <link rel="stylesheet" href="CSS/">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<nav class="navbar"></nav>
-<header class="hero-section">
-    <div class="content">
-        <img src="img/logo2.jpg" class="logo" alt="">
-        <p class="sub-heading">Beste Nederlandse Villa's</p>
-    </div>
+<?php
+include_once 'PHP/header.php';
+?>
 </header>
 <div class="container">
     <div class="flexbox">
