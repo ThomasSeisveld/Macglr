@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-    <title>House Details</title>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="CSS/house.css">
-    <link rel="stylesheet" href="CSS/header.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Dev.css">
+    <link rel="stylesheet" href="CSS/privacy.css">
     <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
-<nav class="navbar"></nav>
+<?php
+include_once 'PHP/header.php';
+?>
 <?php
 if (isset($_GET['id'])) {
     $house_id = $_GET['id'];
