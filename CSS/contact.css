@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+form {
+    margin-top: 30px;
+    transition: all 3s ease-in-out;
+}
+.reg {
+    margin-top: 50px;
+    color: #fff;
+    transition: all 1s ease-in-out;
+    text-align: center;
+}
+.reg h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+}
+.reg h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.box {
+
+    position: relative;
+    width: 450px;
+    height: 480px;
+    background-color: #2AA2D6;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.form {
+    width: 400px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+form .submit {
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 75px;
+    width: 300px;
+    background: #ffffff;
+    border-color: transparent;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 600px;
+    font-size: 24px;
+}
+.submit:hover {
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+#accept {
+    margin-top: 0;
+}
+textarea {
+    background-color: transparent;
+    color: #fff;
+    width: 400px;
+    height: 150px;
+    margin-left: 25px;
+    max-height: 150px;
+    max-width: 400px;
+    border-color: white;
+    padding: 5px;
+}
+    ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+   }
+   ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
+  }

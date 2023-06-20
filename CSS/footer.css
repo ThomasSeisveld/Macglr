@@ -1,0 +1,29 @@
+.footer {
+    margin: 0;
+    margin-top: 70px;
+}
+.hr-top {
+    border: 1px solid #999;
+}
+.hr-bottom {
+    border: 4px solid #2AA2D6;
+}
+#logo-footer {
+    width: 100px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer-text {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+    word-spacing: 30px;
+}
+.footer-text a {
+    color: #000;
+}

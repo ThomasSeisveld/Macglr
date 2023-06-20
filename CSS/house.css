@@ -1,0 +1,58 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+.datalist img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.main {
+  line-height: 10px;
+}
+.bieden {
+  margin-top: 40px;
+}
+.huis-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.datalist{
+  max-width: 1000px;
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.15);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+  .input {
+    border: 1px solid #000;
+  }
+  .button {
+    background-color: #000;
+    border: 1px solid transparent;
+    color: #ffffff;
+  } 
+  .button:hover {
+    background-color: #222;
+    cursor: pointer;
+  }
+
+  .error {
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px;
+    color: #ffffff;
+  }
+  .accepted {
+    background-color: greenyellow;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px;
+  }
