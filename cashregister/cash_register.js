@@ -6,14 +6,14 @@ function addSnack(snackName, snackPrice) {
     switch (snackName) {
         case "Hamburger":
             //Increase number of hamburgers
-            let howManyHamburger = Number(document.getElementById("???").value);
+            let howManyHamburger = Number(document.getElementById("howMany").value);
             howManyHamburger++;
-            document.getElementById("???").value = howManyHamburger;
+            document.getElementById("howMany").value = howManyHamburger;
             
             //Increase total price of hamburgers
-            totalPriceHamburger = (howManyHamburger * ???);
+            totalPriceHamburger = (howManyHamburger * snackPrice);
             totalPriceHamburger = roundIt(totalPriceHamburger);
-            document.getElementById("???").value = ???;
+            document.getElementById("totalPrice").value = totalPriceHamburger;
             break;
  
     }
