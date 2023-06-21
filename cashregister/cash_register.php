@@ -47,7 +47,7 @@
             $to = $_POST['email'];
             $subject = "MacMedia";
             $message = "Your order is being prepaired you wil get a nother mail if your order is done." . "\r\n" . "you ordered, " . $info . "\r\n" . "\r\n";
-            $headers = "From: MacMedia";
+            $headers = "From: MacGLR";
             $email = $_POST['email'];
             $query = "INSERT INTO Email (Email) VALUES ('$email')";
             $result = $db->query($query);
