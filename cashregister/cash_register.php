@@ -2,7 +2,28 @@
 <html>
 <head>
     <title>MacMedia Cash Register</title>
-    <script src="" defer></script>
+    <style>
+        body{
+            font-family: "Al Bayan";
+        }
+        table{
+            background-color: #2f3542;
+            color: #d1d1d1;
+        }
+        #info{
+            width: 100%;
+            height: 100px;
+            font-size: 20px;
+        }
+        textarea{
+            margin: 30px;
+        }
+        button{
+            background-color: greenyellow;
+            border: 15px solid greenyellow;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,28 +33,61 @@
         $db = new SQLite3("dbMacMedia.db");
         $db->busyTimeout(5000);
         
-        //Create query and execute query
+
         $query = "SELECT * FROM snacks";
         $result = $db->query($query);
+
+        if(!$result){
+            echo $db->lastErrorMsg();
+        }
+
+        if(isset($_POST['info'])){
+            //get info from textarea
+            $info = $_POST['info2'];
+            $to = $_POST['email'];
+            $subject = "MacMedia";
+            $message = "Your order is being prepaired you wil get a nother mail if your order is done." . "\r\n" . "you ordered, " . $info . "\r\n" . "\r\n";
+            $headers = "From: MacMedia";
+            $email = $_POST['email'];
+            $query = "INSERT INTO Email (Email) VALUES ('$email')";
+            $result = $db->query($query);
+            mail($to, $subject, $message, $headers);
+        }
     ?>
+
     <table>
     <?php
         //Read results from query and create the button, number and price field for each result
         while($snack = $result->fetchArray(SQLITE3_ASSOC)) {?>
             <tr>
-                <td><button type="button" onclick="addSnack('<?php echo $snack['snackName']?>', <?php echo $snack['snackPrice']?>)">
-                    <?php echo $snack['snackName']?> <br> <?php echo $snack['snackPrice'];?></button></td>
-                <td>How many: <input type="text" id="howMany<?php echo $snack['snackName']?>" disabled></td>
-                <td>Price: <input type="text" id="totalPrice<?php echo $snack['snackPrice']?>" disabled></td>
+                <td>
+                    <button type="button" class="snackButton" onclick="addSnack('<?php echo $snack['snackName']?>', <?php echo $snack['snackPrice']?>)" id="<?php echo $snack['ID']; ?>">
+                        <?php echo $snack['snackName']; ?>
+                    </button>
+                </td>
+                <td>
+                    <input type="number" id="<?php echo $snack['snackName']; ?>" name="<?php echo $snack['snackName']; ?>" value="0" disabled>
+                </td>
+                <td>
+                    <input type="text" class="snackPrice" id="<?php echo $snack['ID']; ?>" value="<?php echo $snack['snackPrice']; ?>" disabled>
+                </td>
             </tr>
     <?php }; ?>
     </table>
-    <p>
+
+    <form method="post">
+
+        <textarea id="info" name="info2"></textarea>
+        <input type="button" value="send info" onclick="showinfo()">
         <strong>Total amount for this order:</strong>
         <input type="text" id="totalOrderAmount" disabled>
-        <button type="button">Check out</button>
-    </p>
+         email address:
+        <input type="text" id="email" name="email">
+
+        <input type="submit" name="info" value="send mail">
+    </form>
+
  </body>
 
-</body>
+<script src="cash_register.js"></script>
 </html>
